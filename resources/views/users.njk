@@ -1,0 +1,40 @@
+{% extends 'master' %}
+
+{% block content %} 
+    <table border="1" style="width:100%;padding:10px;">
+        <thead>
+            <tr>
+                <th>col_1</th>
+                <th>col_2</th>
+                <th>col_3</th>
+                <th>col_4</th>
+                <th>col_5</th>
+                <th>col_6</th>
+                <th>col_7</th>
+                <th>col_8</th>
+                <th>col_9</th>
+                <th>col_10</th>
+                <th>col_11</th>
+                <th>col_12</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+            <tr>
+                <td>{{ user.customerNumber }}</td>
+                <td>{{ user.customerName }}</td>
+                <td>{{ user.contactLastName }}</td>
+                <td>{{ user.contactFirstName }}</td>
+                <td>{{ user.phone }}</td>
+                <td>{{ user.addressLine1 }}</td>
+                <td>{{ user.addressLine2 }}</td>
+                <td>{{ user.city }}</td>
+                <td>{{ user.state }}</td>
+                <td>{{ user.postalCode }}</td>
+                <td>{{ user.country }}</td>
+                <td>{{ user.salesRepEmployeeNumber }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>   
+{% endblock %}
